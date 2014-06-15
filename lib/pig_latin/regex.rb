@@ -8,7 +8,7 @@ class PigLatin::Regex
       # if /\y/.match(word)
       #   if /[^aeiou]/.match(word)
       #     word =
-      #     pig_latin_words << word # TODO
+      #     pig_latin_words << word
       #els
       if /\A[^aeiou]/.match(word)
         word = word[1..-1] + word[0] + 'ay'
@@ -34,7 +34,6 @@ end
 #     words.each do |word|
 #       if /\y/.match(word)
 #         if /[^aeiou]/.match(word)
-#          # TODO
 #         end
 #       elsif /\A[^aeiou]/.match(word)
 #         if word.match(/^[[:alpha:]]+$/) #check if word has punctuation

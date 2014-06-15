@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = PigLatin::VERSION
   spec.authors       = ["Gideon Wulfsohn"]
   spec.email         = ["gideon.wulfsohn@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Pig Latin Translator}
+  spec.description   = %q{Used regular expressions to implement my first gem}
   spec.homepage      = ""
   spec.license       = "MIT"
 

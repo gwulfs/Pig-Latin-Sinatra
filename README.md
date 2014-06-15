@@ -1,6 +1,6 @@
 # PigLatin
 
-TODO: Write a gem description
+Creating a pig latin translator to learn Sinatra
 
 ## Installation
 
@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+install gem with this in your gem file:
+
+source 'https://rubygems.org'
+
+gem 'sinatra'
+# Fill in the ??? with your pig_latin's github repository https url
+gem 'pig_latin', :git => '???'
 
 ## Contributing
 
