@@ -1,4 +1,4 @@
-require "pig_latin/version"
+require "pig_latin/version.rb"
 
 module PigLatin
   # Your code goes here...
