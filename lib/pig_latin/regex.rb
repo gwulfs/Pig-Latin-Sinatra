@@ -2,23 +2,23 @@ require 'pry-debugger'
 
 class PigLatin::Regex
   def translate(words)
-    pig_latin_words = []
+    pig_latin_words_array = []
     words = words.split
     words.each do |word|
       # if /\y/.match(word)
       #   if /[^aeiou]/.match(word)
       #     word =
-      #     pig_latin_words << word
+      #     pig_latin_words_array << word
       #els
       if /\A[^aeiou]/.match(word)
         word = word[1..-1] + word[0] + 'ay'
-        pig_latin_words << word
+        pig_latin_words_array << word
       else
         word = word + 'way'
-        pig_latin_words << word
+        pig_latin_words_array << word
       end
     end
-    pig_latin_words
+    pig_latin_words_array
   end
 end
 
@@ -27,7 +27,7 @@ end
 
 # class PigLatin::Regex
 #   def translate(words)
-#     pig_latin_words= []
+#     pig_latin_words_array= []
 #     punctionation = []
 #     punctuation_index = 0
 #     words = words.split
@@ -47,10 +47,10 @@ end
 #         word + s + "ay"
 #       else
 #         word = word + 'way'
-#         pig_latin_words << word
+#         pig_latin_words_array << word
 #       end
 #       punctuation_index += 1
 #     end
-#     pig_latin_words
+#     pig_latin_words_array
 #   end
 # end
