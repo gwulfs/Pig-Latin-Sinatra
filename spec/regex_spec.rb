@@ -28,5 +28,30 @@ describe 'PigLatin::Regex' do
         expect(result).to eq(['ellohay', 'ymay', 'amenay', 'isway', 'ideongay'])
       end
     end
+    # context 'more complex pig latin rules' do
+    #   it “translates a word beginning with a vowel” do
+    #     s = pig.translate(“apple”)
+    #     s.first.should == “appleay”
+    #   end
+
+    #   it “translates a word with two consonants” do
+    #     s = pig.translate(“stupid”)
+    #     s.first.should == “upidstay”
+    #   end
+
+    #   it “gloms several consonants in a row” do
+    #     pig.translate(“three”).should == “eethray”
+    #   end
+
+    #   it “counts ‘qu’ as a single phoneme” do
+    #     s = pig.translate(“quiet”)
+    #     s.first.should == “ietquay”
+    #   end
+
+    #   it “counts ‘sch’ as a single phoneme” do
+    #     s = pig.translate(“school”)
+    #     s.first.should == “oolschay”
+    #   end
+    # end
   end
 end
