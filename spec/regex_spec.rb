@@ -44,16 +44,16 @@ describe 'PigLatin::Regex' do
         expect(result).to eq(['ellohay', 'ymay', 'amenay', 'isway', 'ideongay'])
       end
     end
-    # context 'more complex pig latin rules' do
-    #   it 'translates a word beginning with a vowel' do
-    #     s = pig.translate(“apple”)
-    #     s.first.should == “appleay”
-    #   end
+    context 'more complex pig latin rules' do
+      it 'translates a word beginning with a vowel' do
+        result = pig.translate(“apple”)
+        expect(result.first).to  eq(“appleay”)
+      end
 
-    #   it 'translates a word with two consonants' do
-    #     s = pig.translate(“stupid”)
-    #     s.first.should == “upidstay”
-    #   end
+      it 'translates a word with two consonants' do
+        result = pig.translate(“stupid”)
+        expect(result.first).to  eq(“upidstay”)
+      end
 
     #   it 'several consonants grouped together' do
     #     pig.translate(“three”).should == “eethray”
@@ -68,6 +68,6 @@ describe 'PigLatin::Regex' do
     #     s = pig.translate(“school”)
     #     s.first.should == “oolschay”
     #   # end
-    # end
+    end
   end
 end
