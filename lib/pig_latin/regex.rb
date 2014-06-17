@@ -5,25 +5,15 @@ class PigLatin::Regex
     pig_latin_words_array = []
     words = words.split
     words.each do |word|
-      consonants_at_beginning_of_word = start_of_word(word).to_s
-      if /\y/.match(word)
-        if /[^aeiou]/.match(word)
-          word =
-          pig_latin_words_array << word
-        end
-      elsif consonants_at_beginning_of_word # checks if word begins with consonant
-        i = 0
-        word.each do |letter|
-          if i + consonants_at_beginning_of_word.length < word.length
-            letter = word[i+consonants_at_beginning_of_word.length]
-          elsif i == word.length
-            letter << consonants_at_beginning_of_word
-            word # break pt
-          end
-          i += 1
-        end
+      if /\A[y]/.match(word) # first letter y
+        cons = cons_rule(word).to_s
+        word += word.slice!(0, cons.length) + 'ay'
         pig_latin_words_array << word
-      else
+      elsif cons_rule(word) # first letter cons
+        cons = y_rule(word).to_s
+        word += word.slice!(0, cons.length) + 'ay'
+        pig_latin_words_array << word
+      else # first letter is vowel
         word = word + 'way'
         pig_latin_words_array << word
       end
@@ -31,11 +21,11 @@ class PigLatin::Regex
     pig_latin_words_array
   end
 
-  def consonants_at_beginning_of_word(word)
+  def y_rule(word)
     /\A[^aeiou]*/.match(word)
   end
-  def consonant_translator
-
+  def cons_rule(word)
+    /\A[^aeiouy]*/.match(word)
   end
 end
 
