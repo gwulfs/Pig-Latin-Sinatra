@@ -1,5 +1,3 @@
-require 'pry-debugger'
-
 class PigLatin::Regex
   def translate(words)
     pig_latin_words_array = []
