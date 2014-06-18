@@ -40,19 +40,19 @@ describe 'PigLatin::Regex' do
     end
     context 'works with multiple words' do
       it 'gives back an array of translated words' do
-        result = pig.translate('hello my name is gideon')
-        expect(result).to eq(['ellohay', 'ymay', 'amenay', 'isway', 'ideongay'])
+        result = pig.translate('the name is gideon')
+        expect(result).to eq(['ethay', 'amenay', 'isway', 'ideongay'])
       end
     end
     context 'more complex pig latin rules' do
       it 'translates a word beginning with a vowel' do
-        result = pig.translate(“apple”)
-        expect(result.first).to  eq(“appleay”)
+        result = pig.translate('apple')
+        expect(result.first).to eq('appleway')
       end
 
       it 'translates a word with two consonants' do
-        result = pig.translate(“stupid”)
-        expect(result.first).to  eq(“upidstay”)
+        result = pig.translate('stupid')
+        expect(result.first).to eq('upidstay')
       end
 
     #   it 'several consonants grouped together' do

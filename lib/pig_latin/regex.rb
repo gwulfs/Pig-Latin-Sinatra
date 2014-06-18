@@ -22,10 +22,10 @@ class PigLatin::Regex
   end
 
   def y_rule(word)
-    /\A[^aeiou]*/.match(word)
+    /\A[^aeiou]+/.match(word)
   end
   def cons_rule(word)
-    /\A[^aeiouy]*/.match(word)
+    /\A[^aeiouy]+/.match(word)
   end
 end
 
