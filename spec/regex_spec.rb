@@ -3,7 +3,6 @@ require 'pry-debugger'
 
 describe 'PigLatin::Regex' do
   let(:pig) { PigLatin::Regex.new }
-
   describe '#y_rule' do
     it 'considers letter "y" to be consonant when 1st letter' do
       results = pig.y_rule('yellow').to_s
@@ -44,12 +43,10 @@ describe 'PigLatin::Regex' do
         result = pig.translate('apple')
         expect(result.first).to eq('appleway')
       end
-
       it 'translates a word with two consonants' do
         result = pig.translate('stupid')
         expect(result.first).to eq('upidstay')
       end
-      
     end
   end
 end
