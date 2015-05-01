@@ -2,13 +2,8 @@ require 'spec_helper'
 require 'pry-debugger'
 
 describe 'PigLatin::Regex' do
-  # -> lazy loading :)
   let(:pig) { PigLatin::Regex.new }
 
-  # -> eager loading
-  # before do
-  #   @mike = Person.new("mike")
-  # end
   describe '#y_rule' do
     it 'considers letter "y" to be consonant when 1st letter' do
       results = pig.y_rule('yellow').to_s
@@ -54,20 +49,7 @@ describe 'PigLatin::Regex' do
         result = pig.translate('stupid')
         expect(result.first).to eq('upidstay')
       end
-
-    #   it 'several consonants grouped together' do
-    #     pig.translate(“three”).should == “eethray”
-    #   end
-
-    #   it “counts ‘qu’ as a single phoneme” do
-    #     s = pig.translate(“quiet”)
-    #     s.first.should == “ietquay”
-    #   end
-
-    #   it “counts ‘sch’ as a single phoneme” do
-    #     s = pig.translate(“school”)
-    #     s.first.should == “oolschay”
-    #   # end
+      
     end
   end
 end
